@@ -2,6 +2,7 @@ version: '3'
 services:
   algorand:
     image: algorand/stable:latest
+    restart: always
     ports:
       - "8080:8080"
       - "4001:4001"
