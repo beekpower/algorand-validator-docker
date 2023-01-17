@@ -1,0 +1,13 @@
+version: '3'
+services:
+  algorand:
+    image: algorand/stable:latest
+    ports:
+      - "8080:8080"
+      - "4001:4001"
+      - "40000:40000"
+    volumes:
+      - ./data:/data
+    command: ["sh", "-c", "./goal node start -d /data && tail -f /dev/null"] # Start the validator node
+    # command: ["./goal", "node", "create", "--network", "mainnet", "--destination", "/data"] # Create the initial data directory
+    
