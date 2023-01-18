@@ -3,6 +3,7 @@ services:
   algorand:
     image: algorand/stable:latest
     restart: always
+    cpus: 0.05
     ports:
       - "8080:8080"
       - "4001:4001"
